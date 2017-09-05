@@ -130,7 +130,46 @@ which(all_reps_GRmet$Small.Molecule.Name != ljpGRbrowser$Small_Mol_Name)
 which(all_reps_GRmet$Cell.Name != ljpGRbrowser$Cell_Name)
 fivenum(ljpGRbrowser$GR_AOC - all_reps_GRmet$GR_AOC)
 # [1] -0.033827488 -0.006769788 -0.001510732  0.002810604  0.026212550
+hist(ljpGRbrowser$GRmax - all_reps_GRmet$GRmax)
 # Compare GR metrics from 20248, 20249, 20250 to GR metrics from 20245, 20246, 20247
 fivenum(ljpGRmet$GR_AOC - all_reps_GRmet$GR_AOC)
 # [1] -9.375279e-03  3.710637e-05  3.548758e-04  8.576722e-04  1.903413e-02
-# much closer...
+# much closer, but should be better for AOC and GRmax
+
+#############
+# Compare old LJP to new LJP
+old_ljp = read_tsv("LJP/LJP_GRmetrics_merged.tsv") %>% arrange(cellLine,smallMolecule)
+new_ljp = read_tsv("LJP/20170224_LJP_for_GRB.tsv") %>% arrange(`Cell_Name`,`Small_Mol_Name`)
+which(old_ljp$cellLine != new_ljp$Cell_Name)
+# cell lines the same
+which(old_ljp$smallMolecule != new_ljp$Small_Mol_Name)
+# drugs named differently
+# Rename and re-arrange
+old_ljp$smallMolecule[old_ljp$smallMolecule == "(R)- Roscovitine"] = "Seliciclib"
+old_ljp$smallMolecule[old_ljp$smallMolecule == "BYL719"] = "Alpelisib"
+old_ljp$smallMolecule[old_ljp$smallMolecule == "Flavopiridol"] = "Alvocidib"
+old_ljp$smallMolecule[old_ljp$smallMolecule == "BEZ235"] = "Dactolisib"
+old_ljp$smallMolecule[old_ljp$smallMolecule == "BMS-387032"] = "SNS-032"
+old_ljp$smallMolecule[old_ljp$smallMolecule == "CYT387"] = "Momelotinib"
+old_ljp$smallMolecule[old_ljp$smallMolecule == "GSK2126458"] = "Omipalisib"
+old_ljp$smallMolecule[old_ljp$smallMolecule == "GDC-0941"] = "Pictilisib"
+old_ljp$smallMolecule[old_ljp$smallMolecule == "GW843682"] = "GW843682X"
+old_ljp$smallMolecule[old_ljp$smallMolecule == "NVP-AUY922"] = "Luminespib"
+old_ljp$smallMolecule[old_ljp$smallMolecule == "Rapamycin"] = "Sirolimus"
+old_ljp = old_ljp %>% arrange(cellLine,smallMolecule)
+which(old_ljp$smallMolecule != new_ljp$Small_Mol_Name)
+# drugs now the same
+old_ljp2 = old_ljp[,c(1:3,6,4,7,8,5,9,10)]
+new_ljp2 = new_ljp[,c(2,4:12)]
+names(new_ljp2)[1:2] = c("cellLine","smallMolecule")
+names(new_ljp2)[7] = "Hill"
+names(new_ljp2)[9] = "r2"
+old_ljp2 = as.data.frame(old_ljp2)
+new_ljp2 = as.data.frame(new_ljp2)
+all.equal(new_ljp2, old_ljp2)
+# [1] "Component “pval”: Mean relative difference: 0.0005905279"
+
+# Old and new GRbrowser dataset for LJP are the same except for some names of
+# drugs and extremely small (5e-08) p-value differences
+
+write_tsv(ljpHMS_allreps_sub,"ljp_484950.tsv")
