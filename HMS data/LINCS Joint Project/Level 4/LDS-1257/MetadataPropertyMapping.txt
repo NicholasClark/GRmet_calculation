@@ -1,0 +1,9 @@
+Metadata entity category	Property name in data file	Standard property name in metadata file
+Small Molecule	Small Molecule HMS LINCS ID	SM_Center_Batch_ID
+Small Molecule	Small Molecule Name	SM_Name
+Cell Line	Cell Line HMS LINCS ID	CL_Center_Canonical_ID
+Cell Line	Cell Line Name	CL_Name
+Protein	Protein HMS LINCS ID	PR_LINCS_ID
+Protein	Protein Name	PR_Name
+Primary Cell	Cell HMS LINCS ID	PC_Center_Specific_ID
+Primary Cell	Cell Name	PC_Name

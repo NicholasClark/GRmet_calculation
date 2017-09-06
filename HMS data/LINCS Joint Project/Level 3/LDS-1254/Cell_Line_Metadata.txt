@@ -1,0 +1,10 @@
+CL_Name	CL_LINCS_ID	CL_Alternative_Name	CL_Alternative_ID	CL_Organism	CL_Organ	CL_Tissue	CL_Cell_Type	CL_Cell_Type_Detail	CL_Donor_Sex	CL_Donor_Age	CL_Donor_Ethnicity	CL_Donor_Health_Status	CL_Disease	CL_Disease_Detail	CL_Known_Mutations	CL_Mutation_Citations	CL_Molecular_Features	CL_Genetic_Modification	CL_Growth_Properties	CL_Recommended_Culture_Conditions	CL_Related_Projects	CL_Verification_Reference_Profile	CL_Relevant_Citations	CL_Reference_Source	CL_Reference_Source_ID	CL_Center_Name	CL_Center_Canonical_ID	CL_Provider_Name	CL_Provider_Catalog_ID	CL_Provider_Batch_ID	CL_Quality_Verification	CL_Transient_Modification	CL_Cell_Markers	CL_Passage_Number	CL_Gonosome_Code	CL_Disease_Site_Onset	CL_Disease_Age_Onset	CL_Donor_Age_Death	CL_Donor_Disease_Duration
+MCF7	LCL-1460			Homo sapiens	breast								adenocarcinoma	http://purl.obolibrary.org/obo/DOID_299													HMSL50029	ATCC	HTB-22										
+MCF7	LCL-1460			Homo sapiens	breast								breast adenocarcinoma	http://purl.obolibrary.org/obo/DOID_3458													HMSL50029	ATCC	HTB-22										
+SK-BR-3	LCL-1475			Homo sapiens	breast								adenocarcinoma	http://purl.obolibrary.org/obo/DOID_299													HMSL50057	ATCC	HTB-30										
+SK-BR-3	LCL-1475			Homo sapiens	breast								breast carcinoma	http://purl.obolibrary.org/obo/DOID_3459													HMSL50057	ATCC	HTB-30										
+MDA-MB-231	LCL-1461			Homo sapiens	breast								adenocarcinoma	http://purl.obolibrary.org/obo/DOID_299													HMSL50058	ATCC	HTB-26										
+MDA-MB-231	LCL-1461			Homo sapiens	breast								breast adenocarcinoma	http://purl.obolibrary.org/obo/DOID_3458													HMSL50058	ATCC	HTB-26										
+BT-20	LCL-1476			Homo sapiens	breast								breast carcinoma	http://purl.obolibrary.org/obo/DOID_3459													HMSL50105	ATCC	HTB-19										
+Hs 578T	LCL-1315			Homo sapiens	breast								invasive ductal carcinoma	http://purl.obolibrary.org/obo/DOID_3008													HMSL50238	ATCC	HTB-126										
+MCF 10A	LCL-2085			Homo sapiens	breast		epithelial		female				fibrocystic disease	non-tumorigenic				none	adherent					ATCC	CRL-10317		HMSL50583												

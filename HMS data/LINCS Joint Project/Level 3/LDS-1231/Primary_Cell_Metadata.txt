@@ -1,0 +1,2 @@
+PC_Name	PC_LINCS_ID	PC_Center_Specific_ID	PC_Provider_Name	PC_Provider_Catalog_ID	PC_Organism	PC_Tissue	PC_Cell_Type	PC_Cell_Type_Detail	PC_Disease	PC_Growth_Properties	PC_Donor_Sex	PC_Donor_Age	PC_Donor_Ethnicity
+PromoCell cardiomyocytes Line A	LPC-1001	A	PromoCell	3042901.2							Male	54	Caucasian
